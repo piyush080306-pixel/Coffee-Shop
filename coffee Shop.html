@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop & Bean & Brew</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <!-- Swiper CSS for carousel -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="w-full fixed top-0 left-0 z-50 transition-all duration-300 fade-in-section" id="main-header">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl text-[#D4A017] footer-cup"><i class="fas fa-mug-hot"></i></span>
+        <span class="text-2xl font-bold text-white logo-text" style="font-family:'Playfair Display',serif;">Coffee Shop</span>
+      </div>
+      <ul class="flex gap-6" id="nav-menu">
+        <li><a href="#about" class="nav-link text-white text-lg" data-section="about">About</a></li>
+        <li><a href="#menu" class="nav-link text-white text-lg" data-section="menu">Menu</a></li>
+        <li><a href="#testimonials" class="nav-link text-white text-lg" data-section="testimonials">Testimonials</a></li>
+        <li><a href="#gallery" class="nav-link text-white text-lg" data-section="gallery">Gallery</a></li>
+        <li><a href="#online-order" class="nav-link text-white text-lg" data-section="online-order">Order</a></li>
+        <li><a href="#blog" class="nav-link text-white text-lg" data-section="blog">Blog</a></li>
+        <li><a href="#events" class="nav-link text-white text-lg" data-section="events">Events</a></li>
+        <li><a href="#store-locator" class="nav-link text-white text-lg" data-section="store-locator">Location</a></li>
+        <li><a href="#contact-section" class="nav-link text-white text-lg" data-section="contact-section">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="w-full bg-white py-12 md:py-24 fade-in-section" id="hero">
+    <div class="max-w-7xl mx-auto flex hero-content items-center justify-between px-6">
+      <div class="flex-1">
+        <h1 class="text-4xl md:text-6xl font-bold text-[#8B5A2B] mb-2" style="font-family:'Playfair Display',serif;">
+          Best Chocolaty Coffee!
+        </h1>
+        <div class="hero-underline"></div>
+        <h2 class="text-xl md:text-2xl text-[#F4A261] font-semibold mb-4">Make your day great with our special coffee!</h2>
+        <p class="mb-6 text-lg md:text-xl text-[#4A2C2A]">
+          Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy.
+        </p>
+        <div class="flex gap-4 mt-6">
+          <a href="#menu" class="hero-btn order px-8 py-3">Order Now</a>
+          <a href="#contact-section" class="hero-btn contact px-8 py-3">Contact Us</a>
+        </div>
+      </div>
+      <div class="flex-1 flex justify-center hero-img-wrapper">
+        <img src="images/coffee-hero-section.png" alt="Coffee Cup Splash" class="hero-img w-80 rounded-2xl" id="hero-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="bg-white py-20 fade-in-section">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <!-- Image Section -->
+      <div class="relative">
+        <div class="bg-[#F5E8C7] rounded-2xl transform rotate-[-3deg] transition-transform duration-500 hover:rotate-0 hover:scale-105">
+          <img src="about us.png" alt="Cozy corner of the coffee shop" class="rounded-2xl shadow-2xl w-full h-auto transform rotate-[6deg]">
+        </div>
+      </div>
+      <!-- Text Content Section -->
+      <div>
+        <span class="text-lg font-bold text-[#D4A017]">Our Story</span>
+        <h2 class="font-bold text-4xl md:text-5xl text-[#4A2C2A] mt-2 mb-6">Brewing Moments, Not Just Coffee</h2>
+        <p class="text-lg text-[#4A2C2A] mb-6">
+          Founded in 2020, Bean & Brew started as a dream to create a space where community and coffee could come together. We're a family-run shop dedicated to sourcing the finest ethically-grown beans and brewing every single cup with passion and precision.
+        </p>
+        <div class="grid grid-cols-3 gap-4 text-center my-8">
+          <div>
+            <h3 class="text-4xl font-bold text-[#D4A017] counter" data-target="10000">0</h3>
+            <p class="font-semibold text-[#4A2C2A] mt-1">Happy Customers</p>
+          </div>
+          <div>
+            <h3 class="text-4xl font-bold text-[#D4A017] counter" data-target="5">0</h3>
+            <p class="font-semibold text-[#4A2C2A] mt-1">Bean Origins</p>
+          </div>
+          <div>
+            <h3 class="text-4xl font-bold text-[#D4A017] counter" data-target="15">0</h3>
+            <p class="font-semibold text-[#4A2C2A] mt-1">Awards Won</p>
+          </div>
+        </div>
+        <a href="#menu" class="inline-block bg-[#4A2C2A] text-white py-3 px-8 rounded-full font-bold text-lg hover:bg-[#D4A017] transition-all duration-300 transform hover:scale-105">
+          Explore Our Menu <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+    <!-- Our Menu -->
+    <section id="menu" class="max-w-7xl mx-auto px-6 py-16 fade-in-section" style="
+      background: #F5E8C7 url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNEQTRBMDE3IiBkPSJNMCAwSDIwVjIwSDB6IiBvcGFjaXR5PSIuMDMiLz48cGF0aCBkPSJNMTAgMTAuNzU0Yy0uNDQ4IDAtLjgyLS4zNzItLjgyLS44MnMuMzcyLS44Mi44Mi0uODIuODIzLjM3Mi44MjMuODItLjM3Mi44Mi0uODIzLjgyek0xMCAxMi4zOTdjMS4yMDYgMCAyLjE4LS45NzQgMi4xOC0yLjE4cy0uOTc0LTIuMTgtMi4xOC0yLjE4LTIuMTguOTc0LTIuMTggMi4xOC45NzQgMi4xOCAyLjE4IDIuMTh6IiBmaWxsPSIjNEE0QzJBIiBvcGFjaXR5PSIuMDgiLz48L2c+PC9zdmc+');
+      background-size: 20px 20px;
+      animation: bg-pan 20s linear infinite;
+    ">
+    <div class="flex flex-col items-center mb-8">
+      <span class="text-5xl text-[#D4A017] mb-2 animate-bounce"><i class="fas fa-coffee"></i></span>
+      <h2 class="font-bold text-4xl md:text-5xl heading-underline mb-4" style="color:#4A2C2A;">
+        Our Menu 
+      </h2>
+      <p class="mt-4 mb-8 text-lg md:text-xl font-medium text-[#4A2C2A]">
+        Discover handcrafted drinks and fresh bakes, made with love and the finest ingredients.
+      </p>
+      <!-- Filter -->
+      <div class="flex gap-4 mb-8">
+        <button class="px-4 py-2 rounded-full border border-[#D4A017] text-[#4A2C2A] font-semibold filter-btn active" data-filter="all">All</button>
+        <button class="px-4 py-2 rounded-full border border-[#D4A017] text-[#4A2C2A] font-semibold filter-btn" data-filter="drinks">Drinks</button>
+        <button class="px-4 py-2 rounded-full border border-[#D4A017] text-[#4A2C2A] font-semibold filter-btn" data-filter="food">Food</button>
+        <button class="px-4 py-2 rounded-full border border-[#D4A017] text-[#4A2C2A] font-semibold filter-btn" data-filter="specials">Specials</button>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" id="menu-grid">
+      <!-- Espresso -->
+      <div class="menu-card-container" data-type="drinks">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-coffee"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Espresso</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Espresso</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">Bold and rich, our single-origin espresso is a perfect pick-me-up.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$3.00</div>
+          </div>
+        </div>
+      </div>
+      <!-- Cappuccino -->
+      <div class="menu-card-container" data-type="drinks">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-mug-hot"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Cappuccino</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Cappuccino</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">Frothy milk meets robust espresso, topped with delicate latte art.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$4.50</div>
+          </div>
+        </div>
+      </div>
+      <!-- Cold Brew -->
+      <div class="menu-card-container" data-type="drinks">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-glass-whiskey"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Cold Brew</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Cold Brew</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">Smooth, refreshing, and steeped for 12 hours for maximum flavor.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$4.00</div>
+          </div>
+        </div>
+      </div>
+      <!-- Butter Croissant -->
+      <div class="menu-card-container" data-type="food">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-croissant"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Butter Croissant</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Butter Croissant</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">Flaky, golden, and baked fresh daily for a buttery delight.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$3.50</div>
+          </div>
+        </div>
+      </div>
+      <!-- Vegan Blueberry Muffin -->
+      <div class="menu-card-container" data-type="food">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-muffin"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Vegan Blueberry Muffin</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Vegan Blueberry Muffin</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">Soft, sweet, and packed with fresh blueberries.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$4.00</div>
+          </div>
+        </div>
+      </div>
+      <!-- Caramel Latte -->
+      <div class="menu-card-container" data-type="specials">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-coffee"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Caramel Latte</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Caramel Latte</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">Creamy latte with a swirl of house-made caramel.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$5.00</div>
+          </div>
+        </div>
+      </div>
+      <!-- Latte -->
+      <div class="menu-card-container" data-type="drinks">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-mug-saucer"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Latte</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Latte</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">Smooth espresso with steamed milk, a creamy classic for any time of day.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$4.50</div>
+          </div>
+        </div>
+      </div>
+      <!-- Mocha -->
+      <div class="menu-card-container" data-type="drinks">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-mug-hot"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Mocha</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Mocha</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">Rich espresso and dark chocolate, topped with whipped cream.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$5.00</div>
+          </div>
+        </div>
+      </div>
+      <!-- Iced Tea -->
+      <div class="menu-card-container" data-type="drinks">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-glass-water"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Iced Tea</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Iced Tea</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">Freshly brewed black tea, served chilled with a slice of lemon.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$3.00</div>
+          </div>
+        </div>
+      </div>
+      <!-- Chocolate Chip Cookie -->
+      <div class="menu-card-container" data-type="food">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-cookie-bite"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Chocolate Chip Cookie</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Chocolate Chip Cookie</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">A classic, warm cookie loaded with gooey chocolate chips.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$2.50</div>
+          </div>
+        </div>
+      </div>
+      <!-- Pumpkin Spice Latte -->
+      <div class="menu-card-container" data-type="specials">
+        <div class="menu-card">
+          <div class="menu-card-face menu-card-front">
+            <span class="menu-icon text-4xl text-[#D4A017] mb-2 block"><i class="fas fa-leaf"></i></span>
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Pumpkin Spice Latte</h3>
+          </div>
+          <div class="menu-card-face menu-card-back">
+            <h3 class="font-bold text-xl md:text-2xl text-[#4A2C2A] mb-1">Pumpkin Spice Latte</h3>
+            <p class="text-base md:text-lg text-[#4A2C2A] mb-2">Espresso, steamed milk, pumpkin spice, and a touch of cinnamon.</p>
+            <div class="font-bold text-[#D4A017] text-lg">$5.50</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Today's Special -->
+  <section id="todays-special" class="py-20 fade-in-section">
+    <!-- Floating decorative beans -->
+    <i class="fas fa-coffee-bean floating-bean text-white/10 text-6xl top-1/4 left-[5%]" style="animation-duration: 7s;"></i>
+    <i class="fas fa-coffee-bean floating-bean text-white/10 text-4xl top-1/2 right-[8%]" style="animation-duration: 5s; animation-delay: -2s;"></i>
+    <i class="fas fa-coffee-bean floating-bean text-white/10 text-5xl bottom-[15%] left-[10%]" style="animation-duration: 8s; animation-delay: -4s;"></i>
+
+    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+      <span class="text-5xl text-[#D4A017] mb-4 inline-block"><i class="fas fa-star animate-pulse"></i></span>
+      <h2 class="font-bold text-4xl md:text-5xl text-white mb-4">
+        Today's Special
+      </h2>
+      <p class="mb-12 text-lg text-gray-300">Don't miss out on our exclusive, handcrafted offer for today only!</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <div class="special-card bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/2 relative overflow-hidden">
+            <img src="velvet-brew.png" alt="Velvet Brew" class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110">
+          </div>
+          <div class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
+            <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full absolute top-6 right-6 transform rotate-12">LIMITED TIME</span>
+            <h3 class="text-3xl font-bold text-[#4A2C2A] mb-4">Velvet Nitro Brew</h3>
+            <p class="text-lg text-[#4A2C2A] mb-6">Indulge in our special Velvet Brew – an ultra-creamy, nitrogen-infused cold brew with hints of cocoa and vanilla.</p>
+            <div class="flex items-baseline gap-4 mb-8">
+              <span class="text-4xl font-bold text-[#D4A017]">$4.75</span>
+              <span class="text-xl text-gray-400 line-through">$6.00</span>
+            </div>
+            <button class="w-full bg-[#4A2C2A] text-white py-3 rounded-full font-bold text-lg hover:bg-[#D4A017] transition-all duration-300 transform hover:scale-105">
+              <i class="fas fa-shopping-cart mr-2"></i>
+              Order The Special
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials -->
+  <section id="testimonials" class="max-w-4xl mx-auto px-6 py-16 fade-in-section text-centre">
+    <h2 class="text-3xl font-bold text-[#4A2C2A] mb-8 heading-underline">Testimonials</h2>
+    <div class="swiper mySwiper bg-[#F5E8C7] rounded-xl shadow-lg py-8 px-4">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide flex flex-col items-center text-center relative">
+          <span class="text-3xl text-[#D4A017] mb-2"><i class="fas fa-coffee-bean"></i></span>
+          <blockquote class="text-lg md:text-xl text-[#4A2C2A] font-medium mb-2">“Coffee Shop’s cappuccino is the best I’ve ever had! The cozy vibe keeps me coming back.”</blockquote>
+          <span class="font-bold text-[#D4A017] text-base md:text-lg">Sarah T.</span>
+        </div>
+        <div class="swiper-slide flex flex-col items-center text-center relative">
+          <span class="text-3xl text-[#D4A017] mb-2"><i class="fas fa-coffee-bean"></i></span>
+          <blockquote class="text-lg md:text-xl text-[#4A2C2A] font-medium mb-2">“Their cold brew is so smooth, and the staff are always so welcoming!”</blockquote>
+          <span class="font-bold text-[#D4A017] text-base md:text-lg">James R.</span>
+        </div>
+        <div class="swiper-slide flex flex-col items-center text-center relative">
+          <span class="text-3xl text-[#D4A017] mb-2"><i class="fas fa-coffee-bean"></i></span>
+          <blockquote class="text-lg md:text-xl text-[#4A2C2A] font-medium mb-2">“The vegan muffin is a game-changer. Perfect with their espresso.”</blockquote>
+          <span class="font-bold text-[#D4A017] text-base md:text-lg">Emma L.</span>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev text-[#4A2C2A]"></div>
+      <div class="swiper-button-next text-[#4A2C2A]"></div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="max-w-7xl mx-auto px-6 py-16 fade-in-section">
+    <div class="text-center mb-12">
+      <span class="text-5xl text-[#D4A017] mb-4 block"><i class="fas fa-images"></i></span>
+      <h2 class="font-bold text-3xl md:text-4xl heading-underline mb-4" style="color:#4A2C2A;">
+        Our Moments
+      </h2>
+      <p class="text-xl text-[#4A2C2A] max-w-2xl mx-auto">Peek into the cozy world of Bean & Brew, where every moment is brewed to perfection.</p>
+    </div>
+    <div class="columns-2 md:columns-3 gap-4 space-y-4">
+      <div class="gallery-item break-inside-avoid">
+        <img src="images/latte.png" alt="Pouring the perfect latte">
+        <div class="overlay">
+          <div class="caption">Pouring the perfect latte</div>
+        </div>
+      </div>
+      <div class="gallery-item break-inside-avoid">
+        <img src="images/barista at work.jpeg" alt="Barista at work">
+        <div class="overlay">
+          <div class="caption">Barista at work</div>
+        </div>
+      </div>
+      <div class="gallery-item break-inside-avoid">
+        <img src="images/cozy corner1.png" alt="Cozy shop corner">
+        <div class="overlay">
+          <div class="caption">Cozy shop corner</div>
+        </div>
+      </div>
+      <div class="gallery-item break-inside-avoid">
+        <img src="images/coffee art.jpeg" alt="Coffee art">
+        <div class="overlay">
+          <div class="caption">Coffee art</div>
+        </div>
+      </div>
+      <div class="gallery-item break-inside-avoid">
+        <img src="images/Pastries.png" alt="Fresh pastries">
+        <div class="overlay">
+          <div class="caption">Fresh pastries</div>
+        </div>
+      </div>
+      <div class="gallery-item break-inside-avoid">
+        <img src="images/community table.png" alt="Community table">
+        <div class="overlay">
+          <div class="caption">Community table</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="bg-gradient-to-r from-[#8B5A2B] to-[#4A2C2A] py-16 fade-in-section" id="newsletter">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <div class="flex justify-center mb-6">
+        <span class="text-5xl text-[#D4A017] animate-bounce"><i class="fas fa-envelope-open-text"></i></span>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" style="font-family:'Playfair Display',serif;">
+        Stay Brewed In
+      </h2>
+      <p class="text-xl text-[#F5E8C7] mb-8 max-w-2xl mx-auto">
+        Get exclusive coffee tips, special offers, and be the first to know about new menu items!
+      </p>
+      <form class="newsletter-form flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-full text-[#4A2C2A] focus:outline-none focus:ring-2 focus:ring-[#D4A017]" required>
+        <button type="submit" class="px-8 py-3 bg-[#D4A017] text-white font-bold rounded-full hover:bg-[#F4A261] transition-all duration-300 transform hover:scale-105">
+          Subscribe <i class="fas fa-paper-plane ml-2"></i>
+        </button>
+      </form>
+      <p class="text-sm text-[#F5E8C7] mt-4">Join 2,500+ coffee lovers! Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- Online Ordering Section -->
+  <section class="bg-[#F5E8C7] py-16 fade-in-section" id="online-order">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="text-5xl text-[#D4A017] mb-4 block animate-pulse"><i class="fas fa-shopping-cart"></i></span>
+        <h2 class="text-4xl md:text-5xl font-bold text-[#4A2C2A] mb-4" style="font-family:'Playfair Display',serif;">
+          Order Online
+        </h2>
+        <p class="text-xl text-[#4A2C2A] max-w-2xl mx-auto">
+          Skip the line! Order your favorite coffee and treats online for pickup or delivery.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Order Cart -->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+          <h3 class="text-2xl font-bold text-[#4A2C2A] mb-6 flex items-center">
+            <i class="fas fa-shopping-bag text-[#D4A017] mr-3"></i>
+            Your Order
+          </h3>
+          <div id="cart-items" class="space-y-4 mb-6">
+            <!-- Cart items will be populated by JavaScript -->
+            <p id="cart-placeholder" class="text-gray-500 text-center">Your cart is empty.</p>
+          </div>
+          <div class="border-t pt-4">
+            <div class="flex justify-between text-lg font-bold text-[#4A2C2A] mb-4">
+              <span>Total:</span>
+              <span id="cart-total">$0.00</span>
+            </div>
+            <button id="checkout-btn" class="w-full bg-[#4A2C2A] text-white py-3 rounded-full font-bold hover:bg-[#D4A017] transition-all duration-300">
+              <i class="fas fa-credit-card mr-2"></i>
+              Checkout
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Order Menu -->
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold text-[#4A2C2A] mb-6 flex items-center">
+            <i class="fas fa-coffee text-[#D4A017] mr-3"></i>
+            Quick Order
+          </h3>
+          <div class="grid grid-cols-1 gap-4">
+            <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-bold text-[#4A2C2A]">Espresso</h4>
+                  <p class="text-sm text-gray-600">$3.00</p>
+                </div>
+                <button class="add-to-cart bg-[#D4A017] text-white px-4 py-2 rounded-full hover:bg-[#F4A261] transition-colors" data-item="Espresso" data-price="3.00">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-bold text-[#4A2C2A]">Cappuccino</h4>
+                  <p class="text-sm text-gray-600">$4.50</p>
+                </div>
+                <button class="add-to-cart bg-[#D4A017] text-white px-4 py-2 rounded-full hover:bg-[#F4A261] transition-colors" data-item="Cappuccino" data-price="4.50">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-bold text-[#4A2C2A]">Cold Brew</h4>
+                  <p class="text-sm text-gray-600">$4.00</p>
+                </div>
+                <button class="add-to-cart bg-[#D4A017] text-white px-4 py-2 rounded-full hover:bg-[#F4A261] transition-colors" data-item="Cold Brew" data-price="4.00">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-bold text-[#4A2C2A]">Butter Croissant</h4>
+                  <p class="text-sm text-gray-600">$3.50</p>
+                </div>
+                <button class="add-to-cart bg-[#D4A017] text-white px-4 py-2 rounded-full hover:bg-[#F4A261] transition-colors" data-item="Butter Croissant" data-price="3.50">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="bg-white py-16 fade-in-section" id="blog">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="text-5xl text-[#D4A017] mb-4 block"><i class="fas fa-blog"></i></span>
+        <h2 class="text-4xl md:text-5xl font-bold text-[#4A2C2A] mb-4" style="font-family:'Playfair Display',serif;">
+          Coffee Corner
+        </h2>
+        <p class="text-xl text-[#4A2C2A] max-w-2xl mx-auto">
+          Tips, tricks, and stories from our coffee experts.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article class="bg-[#F5E8C7] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <div class="h-48 bg-gradient-to-br from-[#8B5A2B] to-[#4A2C2A] flex items-center justify-center">
+            <i class="fas fa-coffee text-6xl text-[#D4A017]"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#4A2C2A] mb-2">Perfect Espresso at Home</h3>
+            <p class="text-[#4A2C2A] mb-4">Learn the secrets to brewing the perfect espresso shot in your own kitchen.</p>
+            <a href="#" class="text-[#D4A017] font-semibold hover:underline">Read More →</a>
+          </div>
+        </article>
+        
+        <article class="bg-[#F5E8C7] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <div class="h-48 bg-gradient-to-br from-[#8B5A2B] to-[#4A2C2A] flex items-center justify-center">
+            <i class="fas fa-seedling text-6xl text-[#D4A017]"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#4A2C2A] mb-2">Bean Origins Matter</h3>
+            <p class="text-[#4A2C2A] mb-4">Discover how different coffee bean origins affect flavor profiles.</p>
+            <a href="#" class="text-[#D4A017] font-semibold hover:underline">Read More →</a>
+          </div>
+        </article>
+        
+        <article class="bg-[#F5E8C7] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+          <div class="h-48 bg-gradient-to-br from-[#8B5A2B] to-[#4A2C2A] flex items-center justify-center">
+            <i class="fas fa-mug-hot text-6xl text-[#D4A017]"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-[#4A2C2A] mb-2">Latte Art Basics</h3>
+            <p class="text-[#4A2C2A] mb-4">Start your journey into the beautiful world of latte art.</p>
+            <a href="#" class="text-[#D4A017] font-semibold hover:underline">Read More →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="bg-gradient-to-br from-[#F5E8C7] to-[#D4A017] py-16 fade-in-section" id="events">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="text-5xl text-[#4A2C2A] mb-4 block animate-pulse"><i class="fas fa-calendar-alt"></i></span>
+        <h2 class="text-4xl md:text-5xl font-bold text-[#4A2C2A] mb-4" style="font-family:'Playfair Display',serif;">
+          Upcoming Events
+        </h2>
+        <p class="text-xl text-[#4A2C2A] max-w-2xl mx-auto">
+          Join us for coffee tastings, workshops, and special events!
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 bg-[#4A2C2A] text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold">15</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#4A2C2A]">Coffee Cupping Workshop</h3>
+            <p class="text-[#D4A017] font-semibold">March 15, 2024</p>
+          </div>
+          <p class="text-[#4A2C2A] mb-4">Learn to taste and evaluate different coffee beans like a professional.</p>
+          <button class="event-register-btn w-full bg-[#4A2C2A] text-white py-2 rounded-full hover:bg-[#8B5A2B] transition-colors">
+            Register Now
+          </button>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 bg-[#4A2C2A] text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold">22</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#4A2C2A]">Latte Art Masterclass</h3>
+            <p class="text-[#D4A017] font-semibold">March 22, 2024</p>
+          </div>
+          <p class="text-[#4A2C2A] mb-4">Create beautiful latte art with our expert baristas.</p>
+          <button class="event-register-btn w-full bg-[#4A2C2A] text-white py-2 rounded-full hover:bg-[#8B5A2B] transition-colors">
+            Register Now
+          </button>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 bg-[#4A2C2A] text-white rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold">29</span>
+            </div>
+            <h3 class="text-xl font-bold text-[#4A2C2A]">Coffee & Pastry Pairing</h3>
+            <p class="text-[#D4A017] font-semibold">March 29, 2024</p>
+          </div>
+          <p class="text-[#4A2C2A] mb-4">Discover the perfect coffee and pastry combinations.</p>
+          <button class="event-register-btn w-full bg-[#4A2C2A] text-white py-2 rounded-full hover:bg-[#8B5A2B] transition-colors">
+            Register Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Locator -->
+  <section id="store-locator" class="py-20 fade-in-section">
+    <div class="relative z-10 text-center mb-12 px-6">
+        <span class="text-5xl text-[#D4A017] mb-4 block animate-pulse"><i class="fas fa-map-marked-alt"></i></span>
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" style="font-family:'Playfair Display',serif;">
+            Find Our Store
+        </h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            We're waiting for you! Come and enjoy a cup of coffee at our cozy location in the heart of the city.
+        </p>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 items-center bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-white/20">
+        <!-- Map -->
+        <div class="md:col-span-3 h-96 md:h-full rounded-xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.990312137767!2d77.21749327526315!3d28.630046875665115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b7414375%3A0xfb5b0075e075f34a!2sStarbucks!5e0!3m2!1sen!2sin!4v1721123456789!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0; filter: invert(90%) hue-rotate(180deg);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <!-- Address Details -->
+        <div class="md:col-span-2 space-y-6 text-white">
+            <h3 class="text-3xl font-bold">Bean & Brew - Delhi</h3>
+            <div class="text-lg space-y-4">
+                <p class="flex items-start"><i class="fas fa-map-marker-alt w-6 text-center mr-3 mt-1 text-[#D4A017]"></i> <span>A-Block, Connaught Place, New Delhi, Delhi 110001</span></p>
+                <p class="flex items-center"><i class="fas fa-phone w-6 text-center mr-3 text-[#D4A017]"></i> <span>+91 98765 43210</span></p>
+                <p class="flex items-center"><i class="fas fa-clock w-6 text-center mr-3 text-[#D4A017]"></i> <span>Mon - Sun: 8:00 AM - 11:00 PM</span></p>
+            </div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Starbucks,Connaught+Place,New+Delhi" target="_blank" class="inline-block bg-[#D4A017] text-white py-3 px-8 rounded-full font-bold text-lg hover:bg-[#F4A261] transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <i class="fas fa-directions mr-2"></i> Get Directions
+            </a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="flex flex-col items-center justify-center min-h-[60vh] px-4 py-16 fade-in-section" id="contact-section">
+    <h1 class="text-4xl md:text-5xl font-bold text-[#4A2C2A] mb-2 heading-underline">CONTACT US</h1>
+    <div class="w-16 h-1 mx-auto mb-6 rounded bg-gradient-to-r from-[#F4A261] to-[#F5E8C7]"></div>
+    <p class="text-lg md:text-xl mb-8 text-[#6b3e26] text-center max-w-xl">Get in touch with us for inquiries or to plan your next coffee break!</p>
+    <div class="flex flex-col md:flex-row gap-12 w-full max-w-4xl">
+      <!-- Contact Info -->
+      <div class="flex-1 flex flex-col gap-6 justify-center">
+        <div class="contact-info-item flex items-center gap-4 group">
+          <span class="contact-info-icon text-2xl text-[#D4A017] transition"><i class="fas fa-map-marker-alt"></i></span>
+          <span class="contact-info-text text-lg font-medium transition">
+            123 Coffee Lane, Serenity, CA 98765
+            <span class="coffee-bean-anim"><i class="fas fa-coffee-bean"></i></span>
+          </span>
+        </div>
+        <div class="contact-info-item flex items-center gap-4 group">
+          <span class="contact-info-icon text-2xl text-[#D4A017] transition"><i class="fas fa-envelope"></i></span>
+          <span class="contact-info-text text-lg font-medium transition">info@beanbrew.com</span>
+        </div>
+        <div class="contact-info-item flex items-center gap-4 group">
+          <span class="contact-info-icon text-2xl text-[#D4A017] transition"><i class="fas fa-phone"></i></span>
+          <span class="contact-info-text text-lg font-medium transition">(123) 456-7890</span>
+        </div>
+        <div class="contact-info-item flex items-center gap-4 group">
+          <span class="contact-info-icon text-2xl text-[#D4A017] transition"><i class="fas fa-clock"></i></span>
+          <span class="contact-info-text text-lg font-medium transition">
+            <span>Monday - Friday: 9:00 AM - 5:00 PM</span><br>
+            <span>Saturday: 10:00 AM - 3:00 PM</span><br>
+            <span>Sunday: Closed</span>
+          </span>
+        </div>
+        <div class="contact-info-item flex items-center gap-4 group">
+          <span class="contact-info-icon text-2xl text-[#D4A017] transition"><i class="fas fa-globe"></i></span>
+          <span class="contact-info-text text-lg font-medium transition">www.beanbrew.com</span>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <form id="contact-form" class="flex-1 flex flex-col gap-6 bg-white bg-opacity-80 rounded-xl shadow-lg p-8 fade-in-section">
+        <input type="text" class="form-input" placeholder="Your name" required>
+        <input type="email" class="form-input" placeholder="Your email" required>
+        <textarea class="form-textarea" rows="4" placeholder="Your message" required></textarea>
+        <button type="submit" class="submit-btn relative">
+          Submit
+          <span class="steam"><i class="fas fa-grip-lines-vertical"></i></span>
+        </button>
+        <div class="success-msg" id="form-msg">✔️ Message sent! Thank you for reaching out.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer mt-16">
+    <div class="flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto px-4 py-2">
+      <div class="flex items-center gap-2 mb-2 md:mb-0">
+        <span class="footer-cup text-2xl"><i class="fas fa-mug-hot"></i></span>
+        <span>© 2025 Coffee Shop / Bean & Brew. All rights reserved.</span>
+      </div>
+      <div class="footer-links flex gap-2">
+        <a href="#">Privacy policy</a>|
+        <a href="#">Refund policy</a>
+      </div>
+      <div class="footer-social flex gap-2">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Swiper JS for testimonials -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- External Script -->
+  <script src="main.js"></script>
+</body>
+</html>
