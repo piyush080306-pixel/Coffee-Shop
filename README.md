@@ -1,5 +1,3 @@
-Here’s a **project overview** and **documentation summary** for your uploaded HTML project — formatted in the same structured way as your “Hyper-Local-Trust-Network” example:
-
 ---
 
 ## **About**
@@ -90,6 +88,3 @@ For any issues or feature suggestions, please open an issue on the GitHub reposi
 This project is licensed under the **MIT License** — see the LICENSE file for more details.
 
 ---
-
-Would you like me to generate a **README.md file** version of this (formatted in Markdown and ready to upload to GitHub)?
-
